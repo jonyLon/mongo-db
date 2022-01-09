@@ -4,7 +4,7 @@
   "description": "tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "go: \"nodemon connection.js"
+    "test": "nodemon connection.js"
   },
   "author": "Vlad Shkilaruk",
   "license": "ISC",
