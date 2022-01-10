@@ -1,6 +1,4 @@
-const findObjsByQuery = async(client, { dbName, collectionName }) => {
-  // query for movies that have an age less than 15 years
-  const query = { age: {$lt:'15'} };
+const findManyObjs = async(client, { dbName, collectionName }, query) => {
   const options = {
   // sort returned documents in ascending order by name (A->Z)
   sort: { name: 1 },
@@ -16,4 +14,4 @@ const findObjsByQuery = async(client, { dbName, collectionName }) => {
   // replace console.dir with your callback to access individual elements
   await cursor.forEach(console.dir);
 }
-module.exports=findObjsByQuery
+module.exports=findManyObjs
