@@ -9,6 +9,7 @@ const createManyObjects = require('./CRUD/createManyObjs')
 const findObjByName = require('./CRUD/findObjByName');
 const findObjsByQuery = require('./CRUD/findObjsByQuery');
 const updateOneObj = require('./CRUD/updateOneObj');
+const upsertOneObj = require('./CRUD/upsertOneObj');
 
 const connect = async () => {
   const uri = `mongodb+srv://masterlordgoker:${password}@cluster0.ekxqw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
@@ -21,7 +22,8 @@ const connect = async () => {
     // await createManyObjects(client,{ dbName, collectionName }, [{name:'Kolia', age:'13'},{name: 'Sveta', age:'13'}, {name: 'Roma', age: '11'}])
     // await findObjByName(client,{ dbName, collectionName }, 'Sveta')
     // await findObjsByQuery(client,{ dbName, collectionName })
-    await updateOneObj(client,{dbName,collectionName},'Kolia',{age: 15})
+    // await updateOneObj(client,{dbName,collectionName},'Kolia',{age: 15})
+    // await upsertOneObj(client,{dbName,collectionName},'Sasha',{age: 21})
   } catch (err) {
     console.error(err);
   } finally {
