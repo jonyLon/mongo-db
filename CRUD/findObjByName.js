@@ -1,6 +1,4 @@
-const {dbName, collectionName} = require('../db-config')
-
-const findObjByName = async(client, objName) => {
+const findObjByName = async(client, {dbName, collectionName}, objName) => {
   const result = await client.db(dbName).collection(collectionName)
   .findOne({name: objName})
   if(result){

@@ -1,5 +1,5 @@
-const config = {
-  dbName: "test-db",
-  collectionName: "objects"
+const configDB = {
+  dbName: "test-db-new",
+  collectionName: "objects-new"
 }
-module.exports=config
+module.exports=configDB
