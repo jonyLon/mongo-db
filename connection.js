@@ -12,6 +12,7 @@ const updateOneObj = require('./CRUD/updateOneObj');
 const upsertOneObj = require('./CRUD/upsertOneObj');
 const updateManyObj = require('./CRUD/updateManyObjs');
 const deleteOneObj = require('./CRUD/deleteOneObj');
+const deleteManyObj = require('./CRUD/deleteManyObjs');
 
 const connect = async () => {
   const uri = `mongodb+srv://masterlordgoker:${password}@cluster0.ekxqw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
@@ -27,7 +28,8 @@ const connect = async () => {
     // await updateOneObj(client,{dbName,collectionName},'Kolia',{age: 15})
     // await upsertOneObj(client,{dbName,collectionName},'Sasha',{age: 21})
     // await updateManyObj(client,{dbName, collectionName}, {type: {$exists: false}}, {type: 'person'})
-    await deleteOneObj(client,{dbName, collectionName}, 'Vlad')
+    // await deleteOneObj(client,{dbName, collectionName}, 'Vlad')
+    // await deleteManyObj(client,{dbName, collectionName}, { age: '13' })
   } catch (err) {
     console.error(err);
   } finally {
