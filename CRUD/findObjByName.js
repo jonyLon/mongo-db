@@ -3,7 +3,7 @@ const findObjByName = async(client, {dbName, collectionName}, objName) => {
   .findOne({name: objName})
   if(result){
     console.log(`Found an obj with name ${objName}`);
-    console.log(result);
+    console.dir(result);
   } else {
     console.log(`No obj found with name ${objName}`);
   }
